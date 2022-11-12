@@ -1,0 +1,118 @@
+.footer {
+    background-color: $footer-background-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.footer__container {
+    display: flex;
+    align-items: baseline;  
+}  
+.contacts {
+    margin-right: 70px;
+}
+.logo--footer {
+    margin: 0;
+}
+.logo__span--footer{
+    color: $title-text-color;
+}
+.social__div {
+    margin-right: 93px;
+}
+.social__title,
+.submit__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $title-text-color;
+}
+.footer__address {
+    font-style: normal;
+    margin-bottom: 9px;
+}
+.footer__text {
+    margin-top: 20px;    
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+}
+.tel__div {
+    margin-top: 9px;
+}
+.footer__tel,
+.footer__e-mail {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $footer-text;
+}
+.footer__e-mail {
+    margin-top: 9px;
+}
+.social__link--footer {
+    background-color: $footer__link-background-color;
+}
+.social__icon--footer {
+    fill: $footer-icon;
+}
+.submit__title {
+    display: block;    
+    margin-bottom: 20px;
+}
+.input__div {
+    display: flex;
+}
+.footer input {
+    margin: 0;
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: 12px;
+
+    border: $input;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: $footer-background-color;
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: $footer-text;
+    }
+}
+.submit__button {
+    display: flex;
+    font-family: inherit;
+    width: 200px;
+    height: 50px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+
+    color: $title-text-color;
+    background-color: $hover-focus-button-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+}
+.submit__icon {
+    margin-left: 10px;
+
+    width: 24px;
+    height: 24px;
+    fill: $footer-icon;
+}

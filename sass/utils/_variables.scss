@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap');
+
+// colors
+$main-text-color: #212121;
+$other-text-color: #757575;
+$title-text-color: #ffffff;
+$hover-focus-button-color: #2196f3;
+$span-color: #000;
+$placeholder-color: rgba(117, 117, 117, 0.5);
+$footer-text: rgba(255, 255, 255, 0.6);
+
+// background-colors
+$overlay-background-color: #212121;
+$backdrop-background-color: rgba(0, 0, 0, 0.2);
+$modal-background-color: #ffffff;
+$modal__button-background-color: #ffffff;
+$hero-background-color: rgba(47, 48, 58, 0.8);
+$benefits-background-color: #f5f4fa;
+$our-work-background-color: rgba(47, 48, 58, 0.8);
+$our-team__section-background-color: #f5f4fa;
+$our-team__div-background-color: #ffffff;
+$footer-background-color: #2f303a;
+$footer__link-background-color: rgba(255, 255, 255, 0.1);
+$card__div: rgba(33, 150, 243, 0.9);
+
+// fill-colors
+$header__icon: #757575;
+$modal__icon: #000;
+$input__svg: #212121;
+$social__icon: #afb1b8;
+$hover-social__icon: #ffffff;
+$claents__icon: #afb1b8;
+$footer-icon: #ffffff;
+
+// border solid and colors
+$header__button: 1px solid #ececec;
+$modal__button: 1px solid rgba(0, 0, 0, 0.1);
+$modal__input: 1px solid rgba(33, 33, 33, 0.2);
+$modal__textarea: 1px solid rgba(33, 33, 33, 0.2);
+$modal-focus: 1px solid #2196F3;
+$checkbox__icon: 2px solid #000000;
+$claents__link: 1px solid #afb1b8;
+$claents__link-hover: 1px solid #2196f3;
+$input: 1px solid rgba(255, 255, 255, 0.3);
+$examples__item: 1px solid #eeeeee;
+
+// regulations
+h1, h2, h3, p, ul {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: "Roboto", Times;
+    color: var(--main-text-color);
+}
+.container {
+    width: 1200px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.list {
+    list-style: none;
+}
+.link {
+    text-decoration: none;
+}
+$cubic-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
