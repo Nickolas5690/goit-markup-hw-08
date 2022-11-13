@@ -1,3 +1,8 @@
+.our-work__section {
+  @media screen and (max-width: 1200px) {
+      display: none;
+    }
+}
 .our-work__title {
     margin-bottom: 50px;
   

@@ -1,14 +1,41 @@
 .footer {
     background-color: $footer-background-color;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 60px;    
 }
-.footer__container {
+.footer__container {    
+    @media screen and (max-width: 767px) {
+            flex-direction: column;
+            
+            gap: 60px;
+            align-items: center;
+                align-content: center;
+                justify-content: center;
+                text-align: center;            
+        }    
+    @media screen and (min-width: 768px) {        
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;        
+        }
+    @media screen and (min-width: 1200px) {        
+        flex-wrap: nowrap;
+        justify-content: left;
+        text-align: left;        
+        }
     display: flex;
     align-items: baseline;  
 }  
 .contacts {
-    margin-right: 70px;
+    @media screen and (max-width: 767px) {
+            margin-right: 0;
+        }
+    @media screen and (min-width: 768px) {
+            margin-right: 165px;
+        }
+    @media screen and (min-width: 1200px) {
+            margin-right: 70px;
+        }    
 }
 .logo--footer {
     margin: 0;
@@ -17,6 +44,9 @@
     color: $title-text-color;
 }
 .social__div {
+    @media screen and (max-width: 1199px) {
+            margin-right: 0;
+        }
     margin-right: 93px;
 }
 .social__title,
@@ -31,7 +61,11 @@
 }
 .footer__address {
     font-style: normal;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 8px;
+    }
     margin-bottom: 9px;
+
 }
 .footer__text {
     margin-top: 20px;    
@@ -42,6 +76,9 @@
     color: $title-text-color;
 }
 .tel__div {
+    @media screen and (max-width: 1199px) {
+            margin-top: 8px;
+        }
     margin-top: 9px;
 }
 .footer__tel,
@@ -60,14 +97,45 @@
 .social__icon--footer {
     fill: $footer-icon;
 }
-.submit__title {
-    display: block;    
-    margin-bottom: 20px;
+.submit__div {
+        @media screen and (max-width: 1199px) {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+        }
+    @media screen and (min-width: 768px) {
+        margin-top: 60px;
 }
-.input__div {
-    display: flex;
+@media screen and (min-width: 1200px) {
+    margin-top: 0;    
+}
+}
+.submit__title {
+    display: block;   
+    margin-bottom: 20px;      
+}
+.input__div {    
+    @media screen and (max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+        }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;                
+        }
 }
 .footer input {
+    @media screen and (max-width: 1199px) {
+            width: 450px;
+        }
     margin: 0;
     width: 358px;
     height: 50px;
