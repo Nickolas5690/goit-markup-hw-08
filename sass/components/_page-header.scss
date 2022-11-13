@@ -164,9 +164,8 @@ header {
     height: 40px;
     fill: $input__svg;
 }
-
-
 .menu {
+    font-family: inherit;
     position: fixed;
         top: 0;
         left: 0;
@@ -177,14 +176,10 @@ header {
         transition: opacity $cubic-transition;
         z-index: 1;
         overflow: scroll;
-
     
-    padding: 40px;
-    
-    border-radius: 4px;
-    
+    padding: 40px;    
+    border-radius: 4px;    
     visibility: visible;
-
     @media screen and (min-width: 767px) {
             display: none;
         }
@@ -227,7 +222,7 @@ header {
         font-size: 24px;
         line-height: 28px;
         letter-spacing: 0.02em;
-        color: $other-text-color;
+        color: $other-text-color;        
 }
 .soc__list {
     display: flex;
@@ -235,20 +230,23 @@ header {
     justify-content: baseline;
 }
 .soc__item {
+    display: flex;
     font-weight: 500;
         font-size: 18px;
         line-height: 1.22;       
         letter-spacing: 0.02em;
-        color: $hover-focus-button-color;
+        color: #2196F3;
         &:not(:last-child) {
             margin-right: 10px;
         }
+    &:not(:first-child)::before {
+        content: '';
+        width: 1px;
+        height: 22px;
+        background-color: rgba(33, 33, 33, 0.2);
+        margin-right: 10px;        
+    }
 }
-.soc__svg {
-    width: 1px;
-    height: 22px;
-    fill: rgba(33, 33, 33, 0.2);
-    
-}
+
 
 

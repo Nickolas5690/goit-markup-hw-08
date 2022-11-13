@@ -268,6 +268,7 @@ header {
 }
 
 .menu {
+  font-family: inherit;
   position: fixed;
   top: 0;
   left: 0;
@@ -346,20 +347,24 @@ header {
 }
 
 .soc__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: #2196f3;
+  color: #2196F3;
 }
 .soc__item:not(:last-child) {
   margin-right: 10px;
 }
-
-.soc__svg {
+.soc__item:not(:first-child)::before {
+  content: "";
   width: 1px;
   height: 22px;
-  fill: rgba(33, 33, 33, 0.2);
+  background-color: rgba(33, 33, 33, 0.2);
+  margin-right: 10px;
 }
 
 .overlay {
