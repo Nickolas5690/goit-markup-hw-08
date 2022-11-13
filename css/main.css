@@ -578,9 +578,6 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 @media screen and (min-width: 480px) {
   .benefits__list {
@@ -594,11 +591,6 @@ header {
 @media screen and (min-width: 768px) {
   .benefits__list {
     margin: -15px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .benefits__list {
-    margin: 0;
   }
 }
 
@@ -618,11 +610,8 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .benefits__item {
-    width: 270px;
-    margin: 0;
-  }
-  .benefits__item:not(:last-child) {
-    margin-right: 30px;
+    width: calc((100% - 120px) / 4);
+    margin: 15px;
   }
 }
 
