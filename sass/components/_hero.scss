@@ -12,7 +12,15 @@
     @media screen and (max-width: 1199px) {
             height: 400px;
         }
-}
+    @media screen and (min-device-pixel-ratio: 2), 
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                .overlay {
+                    background-image: url("../images/hero2x.jpg");
+                }                
+            }
+        }
+
 .hero__div {
     text-align: center;
     padding-top: 200px;
@@ -37,8 +45,6 @@
     line-height: 1.62;    
 }
 }
-
-
 .hero__btn {
     font-family: inherit;
     padding: auto;

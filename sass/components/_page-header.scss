@@ -1,16 +1,22 @@
 header {
+    position: relative;
     border-bottom: 1px solid #ececec;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    @media screen and (max-width: 1199px) {            
+        }
 }
 .header__nav {
     display: flex;
     align-items: center;
+    justify-content: baseline;
 }
 .logo {
-    margin-right: 93px;
+    padding-top: 16px;
+    padding-bottom: 16px;    
+    margin-right: 93px;    
 
     font-family: "Raleway";
     font-weight: 700;
@@ -25,6 +31,9 @@ header {
 .header__list {
     display: flex;
     gap: 50px;
+    @media screen and (max-width: 767px) {
+            display: none;
+        }
 }
 .header__link {
     display: block;
@@ -78,6 +87,9 @@ header {
             fill: $hover-focus-button-color;
         }
     }
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
 }
 .header__e-mail {
     margin-left: auto;
@@ -100,6 +112,120 @@ header {
 .header__icon--smartphone {
     width: 10px;
     height: 16px;
+}
+
+// MENU
+
+.open__button,
+.close__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translate(-10px, 10px);
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background-color: transparent;
+    @media screen and (min-width: 767px) {
+        display: none;        
+    }
+}
+.icon-open,
+.icon-close {
+    width: 40px;
+    height: 40px;
+    fill: $input__svg;
+}
+
+
+.menu {
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 700px;
+        background-color: $modal-background-color;
+        opacity: 1;
+        transition: opacity $cubic-transition;
+        z-index: 1;
+        overflow: scroll;
+
+    
+    padding: 40px;
+    
+    border-radius: 4px;
+    
+    visibility: visible;
+
+    @media screen and (min-width: 767px) {
+            display: none;
+        }
+}
+.menu.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+.menu__list {
+    margin-top: 48px;
+}
+.menu__item {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1,175;
+    text-align: left;
+    letter-spacing: 0.02em;
+    color: $main-text-color;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+.active {
+    color: $hover-focus-button-color;
+}
+.menu__tel {
+    display: block;
+    margin-top: 200px;
+    font-weight: 500;
+        font-size: 34px;
+        line-height: 1.176;
+        letter-spacing: 0.02em;
+        color: $hover-focus-button-color;
+}
+.menu__e-mail {
+    margin-top: 32px;
+    display: block;
+    font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: $other-text-color;
+}
+.soc__list {
+    display: flex;
+    margin-top: 64px;
+    justify-content: baseline;
+}
+.soc__item {
+    font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;       
+        letter-spacing: 0.02em;
+        color: $hover-focus-button-color;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+}
+.soc__svg {
+    width: 1px;
+    height: 22px;
+    fill: rgba(33, 33, 33, 0.2);
+    
 }
 
 
