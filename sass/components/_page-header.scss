@@ -11,9 +11,7 @@ header {
     position: relative;
     display: flex;    
     justify-content: baseline;
-    @media screen and (min-width: 768px) {
-        align-items: center;
-    }
+    align-items: center;    
 }
 .logo {
     padding-top: 16px;
@@ -142,55 +140,68 @@ header {
 
 // MENU
 
-.open__button,
-.close__button {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
+.open__button {
     margin-left: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    transform: translate(-10px, 10px);
     width: 40px;
     height: 40px;
-
     border: none;
     background-color: transparent;
     @media screen and (min-width: 767px) {
         display: none;        
     }
 }
-.icon-open,
-.icon-close {
+
+.close__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: translate(-15px, 10px);
+    border: none;
+    background-color: transparent;
+    @media screen and (min-width: 767px) {
+        display: none;        
+    }    
+}
+.menu__svg {
     width: 40px;
     height: 40px;
     fill: $input__svg;
-    &:active {
+    .close__button:active & {
+        fill: $hover-focus-button-color;
+    }
+    .open__button:active & {
         fill: $hover-focus-button-color;
     }
 }
 .menu {    
     position: fixed;
+    opacity: 0.99;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        padding-top: 48px;
+        
         padding-bottom: 48px;
+        padding-left: 40px;
+        padding-right: 40px;
         background-color: $modal-background-color;
         opacity: 1;
         transition: opacity $cubic-transition;
         z-index: 1;        
     
-    padding: 40px;    
+     
     border-radius: 4px;    
     visibility: visible;
     @media screen and (min-width: 767px) {
             display: none;
         }
         >.menu__conteiner {
+            position: relative;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -203,7 +214,9 @@ header {
     opacity: 0;
     pointer-events: none;
 }
-
+.menu__top {
+    padding-top: 48px;
+}
 .menu__item:not(:last-child) {
     margin-bottom: 20px;
 }
