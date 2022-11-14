@@ -1,5 +1,6 @@
 header {
     position: relative;
+    align-items: center;
     border-bottom: 1px solid #ececec;
     font-weight: 500;
     font-size: 14px;
@@ -8,9 +9,11 @@ header {
 }
 .header__nav {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: baseline;    
+    display: flex;    
+    justify-content: baseline;
+    @media screen and (min-width: 768px) {
+        align-items: center;
+    }
 }
 .logo {
     padding-top: 16px;
@@ -141,9 +144,10 @@ header {
 
 .open__button,
 .close__button {
-    position: absolute;
-    top: 0;
-    right: 0;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    margin-left: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,6 +167,9 @@ header {
     width: 40px;
     height: 40px;
     fill: $input__svg;
+    &:active {
+        fill: $hover-focus-button-color;
+    }
 }
 .menu {    
     position: fixed;

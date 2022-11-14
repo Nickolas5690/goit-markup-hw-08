@@ -60,6 +60,9 @@ body {
 
 header {
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid #ececec;
   font-weight: 500;
   font-size: 14px;
@@ -72,12 +75,16 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: baseline;
       -ms-flex-pack: baseline;
           justify-content: baseline;
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .logo {
@@ -234,9 +241,7 @@ header {
 
 .open__button,
 .close__button {
-  position: absolute;
-  top: 0;
-  right: 0;
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,6 +270,10 @@ header {
   width: 40px;
   height: 40px;
   fill: #212121;
+}
+.icon-open:active,
+.icon-close:active {
+  fill: #2196f3;
 }
 
 .menu {
