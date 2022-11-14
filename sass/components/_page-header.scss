@@ -164,8 +164,7 @@ header {
     height: 40px;
     fill: $input__svg;
 }
-.menu {
-    font-family: inherit;
+.menu {    
     position: fixed;
         top: 0;
         left: 0;
@@ -192,19 +191,22 @@ header {
 .menu__list {
     margin-top: 48px;
 }
-.menu__item {
-    font-weight: 500;
+.menu__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+.menu__link {    
     font-size: 40px;
-    line-height: 1,175;
+    line-height: 1.175;
     text-align: left;
     letter-spacing: 0.02em;
     color: $main-text-color;
+    transition: $cubic-transition;    
+    &:hover, :focus {
+        color: $hover-focus-button-color;
+    }
     &:not(:last-child) {
         margin-bottom: 20px;
     }
-}
-.active {
-    color: $hover-focus-button-color;
 }
 .menu__tel {
     display: block;
@@ -230,12 +232,7 @@ header {
     justify-content: baseline;
 }
 .soc__item {
-    display: flex;
-    font-weight: 500;
-        font-size: 18px;
-        line-height: 1.22;       
-        letter-spacing: 0.02em;
-        color: #2196F3;
+    display: flex;    
         &:not(:last-child) {
             margin-right: 10px;
         }
@@ -246,6 +243,12 @@ header {
         background-color: rgba(33, 33, 33, 0.2);
         margin-right: 10px;        
     }
+}
+.soc__link {    
+    font-size: 18px;
+    line-height: 1.22;       
+    letter-spacing: 0.02em;
+    color: $hover-focus-button-color;
 }
 
 
