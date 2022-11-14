@@ -54,6 +54,9 @@ body {
     color: var(--main-text-color);
 }
 .container {
+    @media screen and (max-width: 479px) {
+            width: 100%
+        }
     @media screen and (min-width: 480px) {
         width: 480px
     }
@@ -69,6 +72,10 @@ body {
     padding-right: 15px;
 }
 .section {
+    @media screen and (max-width: 479px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
     @media screen and (min-width: 480px) {
         padding-top: 60px;
         padding-bottom: 60px;

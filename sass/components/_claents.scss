@@ -6,16 +6,25 @@
     line-height: 1.666;
     text-align: center;
     letter-spacing: 0.03em;
+
+    @media screen and (max-width: 1199px) {
+            margin-bottom: 30px;
+        }
+    
 }
 .claents__list {
     margin-top: 30px;
     display: flex;
+    justify-content: center;
     gap: 30px;
     @media screen and (max-width: 1199px) {
         flex-wrap: wrap;
-    }    
+    }
 }
 .claents__link {
+    @media screen and (max-width: 479px) {
+            width: 100%;
+        }
     @media screen and (min-width: 480px) {
         width: 210px;
     }
@@ -53,12 +62,4 @@
 
     fill: $claents__icon;
     transition: $cubic-transition;
-}
-.claents-link:hover,
-.claents-link:focus {
-    border: 1px solid #2196f3;
-}
-.claents-link:hover>svg,
-.claents-link:focus>svg {
-    fill: #2196f3;
 }
