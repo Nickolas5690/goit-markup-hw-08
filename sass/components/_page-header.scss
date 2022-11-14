@@ -175,13 +175,14 @@ header {
     position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 700px;
+        width: 100vw;
+        height: 100vh;
+        padding-top: 48px;
+        padding-bottom: 48px;
         background-color: $modal-background-color;
         opacity: 1;
         transition: opacity $cubic-transition;
-        z-index: 1;
-        overflow: scroll;
+        z-index: 1;        
     
     padding: 40px;    
     border-radius: 4px;    
@@ -189,15 +190,20 @@ header {
     @media screen and (min-width: 767px) {
             display: none;
         }
+        >.menu__conteiner {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: auto;
+        }
 }
 .menu.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
-.menu__list {
-    margin-top: 48px;
-}
+
 .menu__item:not(:last-child) {
     margin-bottom: 20px;
 }
@@ -217,7 +223,7 @@ header {
 }
 .menu__tel {
     display: block;
-    margin-top: 200px;
+    margin-top: 50px;
     font-weight: 500;
         font-size: 34px;
         line-height: 1.176;
