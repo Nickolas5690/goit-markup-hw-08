@@ -38,19 +38,7 @@
     border-radius: 0px 0px 4px 4px;
   }  
   .our-team__img {
-    display: block;
-    @media screen and (min-width: 480px) {
-        width: 450px;
-        height: 460px;
-      }
-    @media screen and (min-width: 768px) {
-        width: 354px;
-        height: 374px;        
-  }
-    @media screen and (min-width: 1200px) {
-      width: 270px;
-      height: 260px;
-    }
+    display: block;    
   }  
   .our-team__div {
     padding-top: 30px;
