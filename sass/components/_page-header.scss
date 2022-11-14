@@ -15,19 +15,23 @@ header {
 }
 .logo {
     padding-top: 16px;
-    padding-bottom: 16px;    
-    margin-right: 93px;    
+    padding-bottom: 16px;
+    margin-right: 88px;
 
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.166;
     letter-spacing: 0.03em;
     color: $hover-focus-button-color;
-    @media screen and (max-width: 1199px) {
-            font-size: 24px;
-            line-height: 1.166;
-            margin-right: 88px;
+    
+    @media screen and (min-width: 1200px) {
+            font-size: 26px;
+            line-height: 1.19;
+            margin-right: 93px;
+        }
+    @media screen and (max-width: 1199px) {            
+            margin-right: 0px;
         }
 }
 .logo__span {
@@ -159,6 +163,7 @@ header {
     height: 40px;
     border: none;
     background-color: transparent;
+    transition: opacity $cubic-transition;
     @media screen and (min-width: 767px) {
         display: none;        
     }
@@ -167,12 +172,14 @@ header {
 .close__button {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 40px;
     height: 40px;
-    transform: translate(-15px, 10px);
+    transform: translate(385px, 10px);
     border: none;
     background-color: transparent;
+    transition: opacity $cubic-transition;
+    
     @media screen and (min-width: 767px) {
         display: none;        
     }    
@@ -189,16 +196,14 @@ header {
     }
 }
 .menu {    
-    position: fixed;
-    opacity: 0.99;
+    position: fixed;    
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100vh;
-        
+        height: 100vh;        
         padding-bottom: 48px;
         padding-left: 40px;
-        padding-right: 40px;
+        padding-right: 15px;
         background-color: $modal-background-color;
         opacity: 1;
         transition: opacity $cubic-transition;
@@ -216,7 +221,8 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            overflow: auto;
+            overflow-x: hidden; 
+            overflow-y: scroll;
         }
 }
 .menu.is-hidden {
@@ -248,43 +254,41 @@ header {
     display: block;
     margin-top: 50px;
     font-weight: 500;
-        font-size: 34px;
-        line-height: 1.176;
-        letter-spacing: 0.02em;
-        color: $hover-focus-button-color;
+    font-size: 34px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+    color: $hover-focus-button-color;
+    @media screen and (max-width: 479px) {
+        font-size: 24px;
+        line-height: 1.166;
+    }
+
 }
 .menu__e-mail {
     margin-top: 32px;
     display: block;
     font-weight: 500;
         font-size: 24px;
-        line-height: 28px;
+        line-height: 1.166;
         letter-spacing: 0.02em;
         color: $other-text-color;        
 }
 .soc__list {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 64px;
-    justify-content: baseline;
-}
-.soc__item {
-    display: flex;    
-        &:not(:last-child) {
+        & li:not(:last-child) {
             margin-right: 10px;
-        }
-    &:not(:first-child)::before {
-        content: '';
-        width: 1px;
-        height: 22px;
-        background-color: rgba(33, 33, 33, 0.2);
-        margin-right: 10px;        
-    }
+            padding-right: 10px;
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }   
 }
-.soc__link {    
+.soc__link {
+    display: inline-block;
     font-size: 18px;
     line-height: 1.22;       
     letter-spacing: 0.02em;
-    color: $hover-focus-button-color;
+    color: $hover-focus-button-color;    
 }
 
 
