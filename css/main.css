@@ -97,7 +97,7 @@ header {
 .logo {
   padding-top: 16px;
   padding-bottom: 16px;
-  margin-right: 88px;
+  margin-right: 0px;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 24px;
@@ -112,9 +112,9 @@ header {
     margin-right: 93px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .logo {
-    margin-right: 0px;
+    margin-right: 88px;
   }
 }
 
@@ -273,9 +273,9 @@ header {
 
 .open__button {
   margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -288,6 +288,7 @@ header {
   background-color: transparent;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 99;
 }
 @media screen and (min-width: 767px) {
   .open__button {
@@ -296,13 +297,10 @@ header {
 }
 
 .close__button {
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 40px;
   height: 40px;
-  -webkit-transform: translate(385px, 10px);
-          transform: translate(385px, 10px);
   border: none;
   background-color: transparent;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -332,6 +330,7 @@ header {
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding-top: 10px;
   padding-bottom: 48px;
   padding-left: 40px;
   padding-right: 15px;
@@ -340,7 +339,6 @@ header {
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
-  border-radius: 4px;
   visibility: visible;
 }
 @media screen and (min-width: 767px) {
@@ -371,8 +369,16 @@ header {
   pointer-events: none;
 }
 
-.menu__top {
-  padding-top: 48px;
+.open__button .icon-close {
+  display: none;
+}
+
+.menu.is-hidden .icon-close {
+  display: block;
+}
+
+.menu.is-hidden .icon-open {
+  display: none;
 }
 
 .menu__item:not(:last-child) {
