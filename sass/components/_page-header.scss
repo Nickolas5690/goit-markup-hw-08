@@ -16,7 +16,7 @@ header {
 .logo {
     padding-top: 16px;
     padding-bottom: 16px;
-    margin-right: 88px;
+    margin-right: 0px;    
 
     font-family: "Raleway";
     font-weight: 700;
@@ -30,8 +30,8 @@ header {
             line-height: 1.19;
             margin-right: 93px;
         }
-    @media screen and (max-width: 1199px) {            
-            margin-right: 0px;
+    @media screen and (min-width: 768px) {            
+            margin-right: 88px;
         }
 }
 .logo__span {
@@ -156,7 +156,7 @@ header {
 
 .open__button {
     margin-left: auto;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -164,18 +164,17 @@ header {
     border: none;
     background-color: transparent;
     transition: opacity $cubic-transition;
+    z-index: 99;
     @media screen and (min-width: 767px) {
         display: none;        
-    }
+    }        
 }
 
 .close__button {
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin-left: auto;
+    margin-right: auto;
     width: 40px;
-    height: 40px;
-    transform: translate(385px, 10px);
+    height: 40px;    
     border: none;
     background-color: transparent;
     transition: opacity $cubic-transition;
@@ -200,18 +199,17 @@ header {
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100vh;        
+        height: 100vh;
+        padding-top: 10px;
         padding-bottom: 48px;
         padding-left: 40px;
         padding-right: 15px;
         background-color: $modal-background-color;
         opacity: 1;
         transition: opacity $cubic-transition;
-        z-index: 1;        
-    
-     
-    border-radius: 4px;    
-    visibility: visible;
+        z-index: 1;
+        visibility: visible;        
+
     @media screen and (min-width: 767px) {
             display: none;
         }
@@ -225,14 +223,22 @@ header {
             overflow-y: scroll;
         }
 }
+
 .menu.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
-.menu__top {
-    padding-top: 48px;
+.open__button .icon-close {
+    display: none;
 }
+.menu.is-hidden .icon-close {
+    display: block;
+}
+.menu.is-hidden .icon-open {
+    display: none;
+}
+
 .menu__item:not(:last-child) {
     margin-bottom: 20px;
 }
@@ -250,6 +256,7 @@ header {
         margin-bottom: 20px;
     }
 }
+
 .menu__tel {
     display: block;
     margin-top: 50px;
@@ -262,7 +269,6 @@ header {
         font-size: 24px;
         line-height: 1.166;
     }
-
 }
 .menu__e-mail {
     margin-top: 32px;
