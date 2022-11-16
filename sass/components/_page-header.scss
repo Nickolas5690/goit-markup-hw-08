@@ -169,6 +169,15 @@ header {
         display: none;        
     }        
 }
+.open__button .icon-close {
+    display: none;
+}
+.open__button.is-open .icon-close {
+    display: block;
+}
+.open__button.is-open .icon-open {
+    display: none;
+}
 
 .close__button {
     margin-left: auto;
@@ -200,7 +209,7 @@ header {
         left: 0;
         width: 100vw;
         height: 100vh;
-        padding-top: 10px;
+        padding-top: 48px;
         padding-bottom: 48px;
         padding-left: 40px;
         padding-right: 15px;
@@ -228,15 +237,6 @@ header {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-}
-.open__button .icon-close {
-    display: none;
-}
-.menu.is-hidden .icon-close {
-    display: block;
-}
-.menu.is-hidden .icon-open {
-    display: none;
 }
 
 .menu__item:not(:last-child) {
